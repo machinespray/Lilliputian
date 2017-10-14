@@ -691,7 +691,7 @@ public class ClassTransformer implements IClassTransformer {
 
         List<MethodNode> methods = classNode.methods;
         for (MethodNode m : methods) {
-            if (m.name.equals("drawEntityOnScreen")) {
+            if (m.name.equals("drawEntityOnScreen")||m.name.equals("func_147046_a")) {
                 VarInsnNode iload0 = new VarInsnNode(Opcodes.ILOAD, 0);
                 VarInsnNode iload1 = new VarInsnNode(Opcodes.ILOAD, 1);
                 VarInsnNode iload2 = new VarInsnNode(Opcodes.ILOAD, 2);
@@ -703,12 +703,6 @@ public class ClassTransformer implements IClassTransformer {
                 code.set(code.get(163), iload1);
                 code.set(code.get(164), iload2);
                 code.set(code.get(168), method);
-					/*int i = 0;
-					for (AbstractInsnNode n : code.toArray()) {
-					if(n.getOpcode()==Opcodes.INVOKEVIRTUAL)
-					System.out.println(i + " -> " + n.visibleTypeAnnotations + " " + n.getType());
-					i++;
-				}*/
             }
         }
 
