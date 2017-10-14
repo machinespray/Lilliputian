@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
 @IFMLLoadingPlugin.TransformerExclusions({"lilliputian.core"})
-@IFMLLoadingPlugin.MCVersion("1.12.2")
+@IFMLLoadingPlugin.MCVersion("1.12.1")
 @IFMLLoadingPlugin.SortingIndex(32767)
 public class FMLLoadingPlugin implements IFMLLoadingPlugin {
 

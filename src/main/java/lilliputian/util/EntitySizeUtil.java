@@ -101,7 +101,7 @@ public class EntitySizeUtil {
 	}
 	
 	public static boolean isOnLadder(Entity entity) {
-		if (entity instanceof EntityPlayer && getEntityScale(entity) <= TINY_THRESHOLD && entity.collidedHorizontally) {
+		if (entity instanceof EntityPlayer && getEntityScale(entity) <= TINY_THRESHOLD && entity.isCollidedHorizontally) {
 			EntityPlayer player = (EntityPlayer) entity;
 			return (player.getHeldItemMainhand().getItem() == Items.SLIME_BALL && player.getHeldItemOffhand().getItem() == Items.SLIME_BALL);
 		}
